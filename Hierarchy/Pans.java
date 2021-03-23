@@ -5,7 +5,9 @@ public class Pans extends Dishes {
     Pans (String type, String material, String color, double size, double thickness) {
         super.Dishes(type, material, color, size);
         this.setThickness(thickness);
+        description = "Pan";
     }
+
     public double getThickness() {
         return thickness;
     }
@@ -17,6 +19,12 @@ public class Pans extends Dishes {
             System.out.println("Толщина отрицательная");
         }
     }
+
+    @Override
+    public double cost() {
+        return 20.1;
+    }
+
     @Override
     public Object Description() {
         System.out.println(toString() + ". Толщина стенок - " + thickness);

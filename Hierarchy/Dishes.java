@@ -1,13 +1,19 @@
 package ru.tpu.Hierarchy;
 
-import java.util.ArrayList;
 
-public class Dishes {
+public abstract class Dishes {
 
     private String type;
     private String material;
     private String color;
     private double size;
+    String description = "Unknown dishes";
+
+    public String getDescription() {
+        return description;
+    }
+
+    public abstract double cost();
 
     public void Dishes(String type, String material, String color, double size) {
         this.type = type;

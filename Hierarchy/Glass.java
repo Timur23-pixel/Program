@@ -6,6 +6,7 @@ public class Glass extends Dishes {
     Glass (String type, String material, String color, double size,boolean handle) {
         super.Dishes(type,material,color,size);
         this.handle = handle;
+        description = "Glass";
     }
     public boolean getHandle() {
         return handle;
@@ -18,5 +19,8 @@ public class Glass extends Dishes {
     public Object Description() {
         System.out.println(toString() + "С ручкой - " + handle);
         return null;
+    }
+    public double cost() {
+        return 10.1;
     }
 }
